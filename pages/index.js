@@ -16,10 +16,10 @@ export default function Home({ blogs }) {
         {
           blogs.map((blog)=>{
             return(
-            <div className="bg-white shadow-lg rounded-lg overflow-hidden border m-4">
+            <div key={blog.slug} className="bg-white shadow-lg rounded-lg overflow-hidden border m-4">
             <div className="p-2">
-              <h1 className="text-gray-900 font-bold text-2xl uppercase">{blog.title}</h1>
-              <p className="text-gray-600 text-sm my-2 h-10 overflow-hidden">{blog.metadata.summary}</p>
+              <h1 className="text-gray-900 font-bold text-2xl uppercase h-8 overflow-hidden">{blog.title}</h1>
+              <p className="text-gray-600 text-sm h-10 overflow-hidden">{blog.metadata.summary}</p>
             </div>
             <img className="h-56 w-full object-cover mt-2" src={blog.metadata.img.imgix_url} alt="NIKE AIR"/>
             <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
