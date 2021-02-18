@@ -1,0 +1,36 @@
+
+const Cosmic = require('cosmicjs')
+const api = Cosmic()
+
+const bucket = api.bucket({
+  slug: process.env.SLUG,
+  read_key: process.env.READ
+})
+
+export async function getServerSideProps(context) {
+    const data = await bucket.getObject({
+      slug: context.query.id.toString(),
+      props: 'slug,title,metadata.img.imgix_url,metadata.details,created' // Limit the API response data by props
+    })
+    const blog = await data.object
+    return {
+      props: {
+        blog,
+      }
+    }
+  }
+
+export default function Blog({blog}) {
+  
+  return (
+    <div className="flex justify-center items-center">
+        <div className="rounded overflow-hidden shadow-2xl m-5">
+            <img className="w-full" src={blog.metadata.img.imgix_url} alt="Sunset in the mountains"/>
+            <div className="px-6 py-4">
+                <div className="font-bold text-xl mb-2">{blog.title}</div>
+                <p className="text-grey-darker text-base">{blog.metadata.details}</p>
+            </div>
+        </div>
+  </div>
+  );
+}
