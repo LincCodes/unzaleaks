@@ -7,7 +7,7 @@ export default function Layout(props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" sizes="192x192" href="/animez.ico" />
+        <link rel="icon" sizes="192x192" href="" />
         <title>Unza Leaks</title>
       </Head>
       <nav className="bg-black text-white font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 shadow sm:items-baseline w-full">
