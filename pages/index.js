@@ -4,8 +4,8 @@ const Cosmic = require('cosmicjs')
 const api = Cosmic()
 
 const bucket = api.bucket({
-  slug: process.env.SLUG,
-  read_key: process.env.READ
+  slug: "unza-leaks-production",
+  read_key: "6iujZzwT2EOvOsEDMyzdJ38cNVK5AN10QC22eCbX7BDMs2j2DA"
 })
 
 export default function Home({ blogs }) {
@@ -22,7 +22,7 @@ export default function Home({ blogs }) {
               <h1 className="text-gray-900 font-bold text-2xl uppercase h-8 overflow-hidden">{blog.title}</h1>
               <p className="text-gray-600 text-sm h-10 overflow-hidden">{blog.metadata.summary}</p>
             </div>
-            <Image layout="responsive" width={500} height={500} className="h-56 w-full object-cover mt-2" src={blog.metadata.img.imgix_url} alt="NIKE AIR"/>
+            <Image layout="responsive" width={500} height={500} className="h-56 w-full object-cover mt-2" src={blog.metadata.img.imgix_url}/>
             <div className="flex items-center justify-between px-4 py-2 bg-gray-900">
               <p className="text-gray-200 font-bold text">{new Date(blog.created).toLocaleDateString()}</p>
               <Link href="/blog/[id]" as={`/blog/${blog.slug}`} >

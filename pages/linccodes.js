@@ -3,8 +3,8 @@ const Cosmic = require('cosmicjs')
 const api = Cosmic()
 
 const bucket = api.bucket({
-  slug: process.env.SLUG,
-  read_key: process.env.READ
+  slug: "unza-leaks-production",
+  read_key: "6iujZzwT2EOvOsEDMyzdJ38cNVK5AN10QC22eCbX7BDMs2j2DA"
 })
 
 export default function Home({ blogs }) {

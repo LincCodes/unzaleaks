@@ -1,5 +1,4 @@
 import { useForm } from "react-hook-form";
-
 const Cosmic = require('cosmicjs')
 const api = Cosmic()
 
