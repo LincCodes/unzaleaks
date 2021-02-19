@@ -7,7 +7,8 @@ export default function Layout(props) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" sizes="192x192" href="" />
+        <meta name="description" content="Spilling the Beans" />
+        <link rel="icon" sizes="192x192" href="leaks.ico" />
         <title>Unza Leaks</title>
       </Head>
       <nav className="bg-black text-white font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 shadow sm:items-baseline w-full">
@@ -20,10 +21,10 @@ export default function Layout(props) {
             <Link href="/">
               <a className="text-lg no-underline text-grey-darkest hover:text-blue-300 ml-2">Home</a>
             </Link>
-            <Link  href="/about">
+            <Link  href="/contact">
               <a className="text-lg no-underline text-grey-darkest hover:text-blue-300 ml-2">Contact</a>
             </Link>
-            <Link  href="/contact">
+            <Link  href="/about">
               <a className="text-lg no-underline text-grey-darkest hover:text-blue-300 ml-2">About</a>
             </Link>
           </div>

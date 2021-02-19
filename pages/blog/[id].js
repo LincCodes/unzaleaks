@@ -1,4 +1,4 @@
-
+import Image from 'next/image'
 const Cosmic = require('cosmicjs')
 const api = Cosmic()
 
@@ -25,7 +25,7 @@ export default function Blog({blog}) {
   return (
     <div className="flex justify-center items-center">
         <div className="rounded overflow-hidden shadow-2xl m-5">
-            <img className="w-full" src={blog.metadata.img.imgix_url} alt="Sunset in the mountains"/>
+            <Image layout="responsive" width={500} height={500}  className="w-full" src={blog.metadata.img.imgix_url}/>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">{blog.title}</div>
                 <p className="text-grey-darker text-base">{blog.metadata.details}</p>

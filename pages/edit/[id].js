@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from 'next/image'
 const Cosmic = require('cosmicjs')
 const api = Cosmic()
 
@@ -78,7 +79,7 @@ export default function Edit({blog}) {
             <input type="text" name="summary" id="summary" value={sum} onChange={(e)=> setsum(e.target.value)} placeholder="Write your summary..." className="text-gray-900 border p-2 w-full"/>
             <label htmlFor="details" className="text-gray-900 block mt-4">Details:</label>
             <textarea name="details" id="details" cols="10" value={det} onChange={(e)=> setdet(e.target.value)} rows="5" placeholder="Write your details.." className="text-gray-900 border p-2 mt-3 w-full"></textarea>
-            <img className="w-full mt-2" src={`https://imgix.cosmicjs.com/${img}`} alt="Sunset in the mountains"/>
+            <Image layout="responsive" width={500} height={500}  className="w-full mt-2" src={`https://imgix.cosmicjs.com/${img}`}/>
             <input type="submit" value="UPDATE" className="w-full mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3"/>
            </form>
   </div>
